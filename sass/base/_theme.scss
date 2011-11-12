@@ -14,8 +14,8 @@ $article-border: #eeeeee !default;
 
 $header-bg: #333 !default;
 $header-border: lighten($header-bg, 15) !default;
-$title-color: #f2f2f2 !default;
-$subtitle-color: #aaa !default;
+$title-color: #ffffd5 !default;
+$subtitle-color: #b6b694 !default;
 
 $text-color: #222 !default;
 $text-color-light: #aaa !default;
@@ -72,7 +72,7 @@ a {
 }
 
 html {
-  background: $page-bg image-url('line-tile.png') top left;
+  background-color: #1f3f3e;
 }
 body {
   > div {
