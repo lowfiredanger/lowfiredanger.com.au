@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Low Fire Danger]]></title>
+  <link href="http://lowfiredanger.github.com/lowfiredanger/atom.xml" rel="self"/>
+  <link href="http://lowfiredanger.github.com/lowfiredanger/"/>
+  <updated>2011-11-12T23:18:49+11:00</updated>
+  <id>http://lowfiredanger.github.com/lowfiredanger/</id>
+  <author>
+    <name><![CDATA[Low Fire Danger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[lightModal - a lightweight lightbox/modal in coffeescript]]></title>
+    <link href="http://lowfiredanger.github.com/lowfiredanger/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript/"/>
+    <updated>2011-11-12T22:35:00+11:00</updated>
+    <id>http://lowfiredanger.github.com/lowfiredanger/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript</id>
+    <content type="html"><![CDATA[<p>hellow</p>
+]]></content>
+  </entry>
+  
+</feed>
