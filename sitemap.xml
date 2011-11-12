@@ -2,20 +2,16 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://lowfiredanger.github.com/lowfiredanger/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript/
+            http://lowfiredanger.github.com/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript/
         </loc>
         <lastmod>2011-11-12T22:36:20+11:00</lastmod>
     </url>
     <url>
-        <loc>http://lowfiredanger.github.com/lowfiredanger/blog/archives/</loc>
+        <loc>http://lowfiredanger.github.com/blog/archives/</loc>
         <lastmod>2011-11-12T22:36:20+11:00</lastmod>
     </url>
     <url>
-        <loc>http://lowfiredanger.github.com/lowfiredanger/blog/</loc>
-        <lastmod>2011-11-12T22:51:42+11:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lowfiredanger.github.com/lowfiredanger/</loc>
-        <lastmod>2011-11-12T23:18:48+11:00</lastmod>
+        <loc>http://lowfiredanger.github.com/blog/</loc>
+        <lastmod>2011-11-12T23:42:01+11:00</lastmod>
     </url>
 </urlset>
