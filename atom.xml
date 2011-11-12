@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Low Fire Danger]]></title>
-  <link href="http://lowfiredanger.com.au/atom.xml" rel="self"/>
-  <link href="http://lowfiredanger.com.au/"/>
-  <updated>2011-11-12T23:01:03+11:00</updated>
-  <id>http://lowfiredanger.com.au/</id>
+  <link href="http://lowfiredanger.github.com/lowfiredanger/atom.xml" rel="self"/>
+  <link href="http://lowfiredanger.github.com/lowfiredanger/"/>
+  <updated>2011-11-12T23:15:28+11:00</updated>
+  <id>http://lowfiredanger.github.com/lowfiredanger/</id>
   <author>
     <name><![CDATA[Low Fire Danger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[lightModal - a lightweight lightbox/modal in coffeescript]]></title>
-    <link href="http://lowfiredanger.com.au/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript/"/>
+    <link href="http://lowfiredanger.github.com/lowfiredanger/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript/"/>
     <updated>2011-11-12T22:35:00+11:00</updated>
-    <id>http://lowfiredanger.com.au/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript</id>
+    <id>http://lowfiredanger.github.com/lowfiredanger/blog/2011/11/12/lightmodal-a-lightweight-lightbox-slash-modal-in-coffeescript</id>
     <content type="html"><![CDATA[<p>hellow</p>
 ]]></content>
   </entry>
