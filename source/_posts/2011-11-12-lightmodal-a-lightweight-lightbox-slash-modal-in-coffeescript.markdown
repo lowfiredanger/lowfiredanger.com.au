@@ -15,6 +15,6 @@ LightModal does away with the cloning and makes the content itself turn into a l
 
 It's written in CoffeeScript as a jquery plugin and includes tests written with Jasmine BDD testing framework. Released under the MIT licence.
 
-[Get the source and demo here](opensource/lightModal)
+[Get the source and demo here](/opensource/lightModal)
 
 
