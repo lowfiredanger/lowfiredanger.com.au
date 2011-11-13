@@ -4,7 +4,7 @@ title: "lightModal - a lightweight lightbox/modal in coffeescript"
 date: 2011-11-12 22:35
 comments: true
 author: Sonny Mai
-categories: 
+categories: Open source, Javascript, CoffeeScript
 ---
 
 I recently made a really lightweight modal box to use on one of our projects [LessPlan](http://lessplan.com "Easily manage Lesson plans for teachers"). There was a need to have a instance of tinyMCE within a modal/lightbox when creating a lesson plan.

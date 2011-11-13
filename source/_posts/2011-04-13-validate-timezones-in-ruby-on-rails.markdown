@@ -3,7 +3,7 @@ layout: post
 title: "Validate timezones in ruby on rails"
 date: 2011-04-13 18:41
 comments: true
-categories: 
+categories: Ruby on Rails
 author: Sonny Mai
 ---
 
