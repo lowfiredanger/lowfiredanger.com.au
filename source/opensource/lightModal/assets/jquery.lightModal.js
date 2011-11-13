@@ -17,7 +17,7 @@
           this.options = $.extend({
             modalContainer: modalContainer,
             width: 'auto',
-            closeButtonDisable: true,
+            closeButtonDisable: false,
             padding: 36,
             topMargin: 18,
             overlayDisable: false,
@@ -60,7 +60,7 @@
           this.$modalContainer.css('left', ($(window).width() - this.modalWidth) / 2 + 'px');
           this.$modalContainer.css('top', $(window).scrollTop() + this.options.topMargin + 'px');
           this.$modalContainer.css('padding', this.options.padding + 'px');
-          if (this.options.closeButtonDisable) {
+          if (!this.options.closeButtonDisable) {
             this.$modalContainer.prepend(this.$closeButton);
             this.$closeButton.click(function(e) {
               e.preventDefault();

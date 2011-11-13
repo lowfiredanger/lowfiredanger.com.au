@@ -117,14 +117,16 @@ h4 {
   line-height: 18px;
   margin: 18px 0; }
 
-
-
 p {
   margin-bottom: 18px; }
 
 a {
+  color: #000;
   text-decoration: none; }
   a:hover {
+    text-decoration: underline; }
+  a:visited {
+    color: #000;
     text-decoration: none; }
 
 ul {
@@ -157,10 +159,9 @@ pre{
   -o-box-shadow: inset 0px 0px 0px 0px rgba(255, 115, 100, 0.4), 0 3px 3px #666666;
   box-shadow: inset 0px 0px 0px 0px rgba(255, 115, 100, 0.4), 0 3px 3px #666666;
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   line-height: 1;
-  text-transform: uppercase;
   padding: 11px 13px;
   text-align: center;
   background-color: #2dd55c;
@@ -171,8 +172,12 @@ pre{
   background-image: -ms-linear-gradient(top, #2dd55c 0%, #068045 100%);
   background-image: -o-linear-gradient(top, #2dd55c 0%, #068045 100%);
   background-image: linear-gradient(top, #2dd55c 0%, #068045 100%); }
+  .btn:visited{
+    color: #fff;
+  }
   .btn:hover {
-    cursor: pointer; }
+    cursor: pointer; 
+    text-decoration: none;}
   .btn:active {
     background-color: #d43c28;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#d43c28 0%), to(#ad3224 50%));

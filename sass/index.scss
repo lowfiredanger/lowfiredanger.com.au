@@ -162,6 +162,7 @@
                 color: #61bbc6;
             }
 
+            a[href="/blog"],
             #contact-us a{
                 font-size: 18px;
                 margin-top: 18px;
@@ -173,7 +174,14 @@
                 -webkit-border-radius: 5px;
             }
 
+            a[href="/blog"]:hover,
             #contact-us a:hover{
                 background-color: #069124;
                 text-decoration: none;
+            }
+
+            a[href="/blog"]{
+                position: fixed;
+                bottom: 18px;
+                right: 36px;
             }
