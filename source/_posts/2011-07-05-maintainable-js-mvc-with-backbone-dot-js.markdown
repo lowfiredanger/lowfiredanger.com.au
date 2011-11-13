@@ -15,7 +15,7 @@ Backbone.js is a lightweight MVC framework for javascript; it lets you organise 
 
 Here are the resources I found most useful.
 
-[http://www.jamesyu.org/2011/01/27/cloudedit-a-backbone-js-tutorial-by-example/](http://www.jamesyu.org/2011/01/27/cloudedit-a-backbone-js-tutorial-by-example/)
-[http://www.jamesyu.org/2011/02/09/backbone.js-tutorial-with-rails-part-2/](http://www.jamesyu.org/2011/02/09/backbone.js-tutorial-with-rails-part-2/)
-[http://documentcloud.github.com/backbone/docs/todos.html](http://documentcloud.github.com/backbone/docs/todos.html)
-[http://backbonetutorials.com/](http://backbonetutorials.com/)
+- [http://www.jamesyu.org/2011/01/27/cloudedit-a-backbone-js-tutorial-by-example/](http://www.jamesyu.org/2011/01/27/cloudedit-a-backbone-js-tutorial-by-example/)
+- [http://www.jamesyu.org/2011/02/09/backbone.js-tutorial-with-rails-part-2/](http://www.jamesyu.org/2011/02/09/backbone.js-tutorial-with-rails-part-2/)
+- [http://documentcloud.github.com/backbone/docs/todos.html](http://documentcloud.github.com/backbone/docs/todos.html)
+- [http://backbonetutorials.com/](http://backbonetutorials.com/)
