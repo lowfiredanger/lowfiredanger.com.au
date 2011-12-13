@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Extending Backbone classes in CoffeeScript"
+title: "Extending Backbone.js classes in CoffeeScript"
 date: 2011-12-12 22:10
 comments: true
 categories: Javascript, Backbone.js
+author: Sonny Mai
 ---
 
 Here's a very quick how-to on extending backbone classes and over riding their methods in coffeescript. You can even call super; that will let you call the original method once you're complete.
@@ -52,3 +53,5 @@ So you'll get alerts in the following order:
 1. Aarhohhoah \*spew\*
 2. Bonjour (called from the ```super``` inside ```DrunkGreeter```)
 3. Hello (called from the ```super``` inside ```MultiLingalGreeter```)
+
+Conclusion: Backbone.js + Coffeescript is sexy isn't it?
