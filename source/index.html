@@ -84,8 +84,13 @@ lfd.site.prototype.scroll = function(that) {
     if(scrollPosition < 475){
 
         // Logo fire
+        
+        newPosition = 100 - scrollPosition/4;
+        $('.img-logo-water').css('top', newPosition + 'px');
+
         newPosition = 1000 - scrollPosition;
         if( newPosition > 634 ) {
+            console.log('in')
             $('.img-logo-fire').css('top', newPosition + 'px');
             $('.img-logo-fire').css('position', 'absolute');
         }else{

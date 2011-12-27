@@ -156,8 +156,8 @@ $baseline: 18px;
             $logo-height: 1200px;
 
             .img-logo-water{
-                position: relative;
-                background: url(/images/main/logo_water.png) no-repeat fixed 50% $baseline;
+                position: fixed;
+                background: url(/images/main/logo_water.png) no-repeat 50% $baseline;
                 height: $logo-height;
                 width: 841px;
                 z-index: 100;
