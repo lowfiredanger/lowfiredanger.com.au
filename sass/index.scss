@@ -164,7 +164,7 @@ $baseline: 18px;
             }
             
             .img-logo-fire{
-                position: absolute;
+                position: fixed;
                 background: url(/images/main/logo_fire.png) no-repeat 50% 0;
                 height: $logo-height;
                 width: 841px;
@@ -172,7 +172,7 @@ $baseline: 18px;
             }
 
             .img-logo-text{
-                position: absolute;
+                position: fixed;
                 background: url(/images/main/logo_text.png) no-repeat 50% 0;
                 height: $logo-height;
                 width: 841px;
