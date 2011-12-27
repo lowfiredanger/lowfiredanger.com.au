@@ -3,14 +3,108 @@
     <head>
         <title>Low Fire Danger: Web applications engineering and development</title>
         <link href="/stylesheets/index.css" media="screen, projection" rel="stylesheet" type="text/css">
-        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="page">
             <section id="hero">
-                <img src="/images/low_fire_danger_large.png" alt="Low Fire Danger web engineering and development"/>
+                <div class="img-logo-water"></div>
+                <div class="img-logo-fire"></div>
+                <div class="img-logo-text"></div>
             </section>
 
+
+<script>
+lfd = {}
+lfd.site = {}
+
+lfd.site = function() {
+    var self = this;
+
+    // Event bindings
+    $(window).resize(function(){
+        self.resizeSection(self);
+    });
+
+    $(window).scroll(function(){
+        self.scroll(self);
+    });
+
+
+    $('#page').height('5000px')
+
+    // Initialise
+    self.resizeSection(self);
+    self.scroll(self);
+    self.initializePositions();
+
+
+    
+}
+
+lfd.site.prototype.initializePositions = function(){
+    // $('.img-logo-fire').css('top', '-10000px');
+};
+
+lfd.site.prototype.resizeSection = function(that) {
+    var self, dimensions
+    self = that;
+    dimensions = self.getWindowDimensions();
+
+    sectionHeight  =  dimensions.height < 640 ? 640 : dimensions.height;
+    $('section').css('height', sectionHeight);
+};
+
+lfd.site.prototype.getWindowDimensions = function() {
+    var windowHeight, windowWidth;
+
+    windowHeight = $(window).height();
+    windowWidth = $(window).width();
+
+    return {
+        height: windowHeight,
+        width: windowWidth
+    };
+
+}
+
+lfd.site.prototype.scroll = function(that) {
+    var self, dimensions, middle, scrollPosition, newPosition;
+    self = that;
+
+    dimensions = self.getWindowDimensions();
+    scrollPosition = $(window).scrollTop();
+
+    middle = dimensions.width/2;
+
+    if(scrollPosition < 495){
+
+        // Logo fire
+        var newPosition = 1000 - scrollPosition;
+        if( newPosition > 634 ) {
+            $('.img-logo-fire').css('top', newPosition + 'px');
+            $('.img-logo-fire').css('position', 'absolute');
+        }else{
+            $('.img-logo-fire').css('top', 268 + 'px');
+            $('.img-logo-fire').css('position', 'fixed');
+        }
+
+        // Logo text
+        var newPosition = 500 - scrollPosition;
+        // if( newPosition > 634 ) {
+            // $('.img-logo-text').css('top', newPosition + 'px');
+            // $('.img-logo-text').css('position', 'absolute');
+        // }else{
+            // $('.img-logo-fire').css('top', 268 + 'px');
+            // $('.img-logo-fire').css('position', 'fixed');
+        // }
+    }
+}
+
+new lfd.site();
+
+</script>
+<!-- 
             <section id="what-we-do">
                 <div class="text">
                     <h2>What do we do?</h2>
@@ -101,7 +195,7 @@
                 <hr/>
                 <p id="contact-us"><a href="mailto:contact@lowfiredanger.com.au" title="Contact Low Fire Danger">contact@lowfiredanger.com.au</a></p>
                 <p>We're a small team of four and we're based in Sydney, Australia</p>
-            </section>
+            </section> -->
 
             <a href="/blog" title="Visit Low Fire Dangers blog">Visit our blog</a>
 

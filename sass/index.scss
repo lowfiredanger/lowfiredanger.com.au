@@ -1,3 +1,5 @@
+$baseline: 18px;
+
             /* http://meyerweb.com/eric/tools/css/reset/
                v2.0b1 | 201101
                NOTE: WORK IN PROGRESS
@@ -125,16 +127,17 @@
 
             section{
                 margin-bottom: 72px;
+                position: relative;
             }
 
             section .text{
-
                 text-align:justify;
             }
 
             #page{
                 margin: 0 auto 72px;
-                width: 650px;
+                width: 850px;
+                position: relative;
             }
 
             a{
@@ -148,7 +151,43 @@
                 border: none;
                 height: 1px;
                 background-color: #000;
-}
+            }
+
+            $logo-height: 1200px;
+
+            .img-logo-water{
+                position: relative;
+                background: url(/images/main/logo_water.png) no-repeat fixed 50% $baseline;
+                height: $logo-height;
+                width: 841px;
+                z-index: 100;
+            }
+            
+            .img-logo-fire{
+                position: absolute;
+                background: url(/images/main/logo_fire.png) no-repeat 50% 0;
+                height: $logo-height;
+                width: 841px;
+                z-index: 200;
+            }
+
+            .img-logo-text{
+                position: absolute;
+                background: url(/images/main/logo_text.png) no-repeat 50% 0;
+                height: $logo-height;
+                width: 841px;
+                z-index: 300;
+            }
+
+            // img.logo-water{
+            //     position: absolute;
+            //     left: 90px
+            // }
+            
+            img.logo-fire{
+                position: absolute;
+                top: 900px
+            }
 
             a:hover{
                 text-decoration: underline;
