@@ -13,6 +13,10 @@
                 <div class="img-logo-text"></div>
             </section>
 
+            <section>
+                <div class="test"></div>
+            </section>
+
 
 <script>
 lfd = {}
@@ -77,10 +81,10 @@ lfd.site.prototype.scroll = function(that) {
 
     middle = dimensions.width/2;
 
-    if(scrollPosition < 495){
+    if(scrollPosition < 475){
 
         // Logo fire
-        var newPosition = 1000 - scrollPosition;
+        newPosition = 1000 - scrollPosition;
         if( newPosition > 634 ) {
             $('.img-logo-fire').css('top', newPosition + 'px');
             $('.img-logo-fire').css('position', 'absolute');
@@ -89,15 +93,22 @@ lfd.site.prototype.scroll = function(that) {
             $('.img-logo-fire').css('position', 'fixed');
         }
 
+        // $('.img-logo-water').css('top', scrollPosition + 'px');
+        // $('.img-logo-water').data('originalY',);
+
         // Logo text
-        var newPosition = 500 - scrollPosition;
-        // if( newPosition > 634 ) {
-            // $('.img-logo-text').css('top', newPosition + 'px');
-            // $('.img-logo-text').css('position', 'absolute');
-        // }else{
-            // $('.img-logo-fire').css('top', 268 + 'px');
-            // $('.img-logo-fire').css('position', 'fixed');
-        // }
+        newPosition = 1500 - scrollPosition;
+        if( newPosition > 1100 ) {
+            $('.img-logo-text').css('top', newPosition + 'px');
+            $('.img-logo-text').css('position', 'absolute');
+        }else{
+            $('.img-logo-text').css('top', 700 + 'px');
+            $('.img-logo-text').css('position', 'fixed');
+        }
+    }
+
+    if(scrollPosition > 475){
+console.log('hi')
     }
 }
 
