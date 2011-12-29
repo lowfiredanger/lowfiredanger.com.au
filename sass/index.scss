@@ -183,6 +183,14 @@ $cream: #ffffd5;
                 z-index: 100;
             }
             
+            .img-logo-large-cog,            
+            .img-logo-small-cog{
+                position: fixed;
+                text-align: center;
+                width: 841px;
+                z-index: 90;
+            }
+            
             .img-logo-fire{
                 position: fixed;
                 text-align: center;

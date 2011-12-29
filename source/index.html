@@ -11,6 +11,8 @@
             <section id="hero">
                 <h1>Low Fire Danger</h1>
                 <div class="img-logo-water"><img src="/images/main/logo_water.png" alt="Low fire danger water"/></div>
+                <div class="img-logo-small-cog"><img src="/images/main/cog_small.png" alt="Low fire danger water"/></div>
+                <div class="img-logo-large-cog"><img src="/images/main/cog_large.png" alt="Low fire danger water"/></div>
                 <div class="img-logo-fire"><img src="/images/main/logo_fire.png"/ alt="Low fire danger fire"></div>
                 <div class="img-logo-text"><img src="/images/main/logo_text.png" alt="Low fire danger logo"/></div>
                 <div class="img-logo-spiel">We <span>design</span> <span class="plus">+</span> <span>engineer</span> web applications</div>
@@ -29,6 +31,8 @@ lfd.site = function() {
     var self = this;
 
     this.$imgLogoWater = $('.img-logo-water');
+    this.$imgLogoSmallCog = $('.img-logo-small-cog img');
+    this.$imgLogoLargeCog = $('.img-logo-large-cog img');
     this.$imgLogoFire = $('.img-logo-fire');
     this.$imgLogoText = $('.img-logo-text');
     this.$imgLogoSpiel = $('.img-logo-spiel');
@@ -99,11 +103,20 @@ lfd.site.prototype.scroll = function() {
         }
 
         self.$imgLogoWater.css('position', 'fixed');
+        self.$imgLogoSmallCog.css('position', 'fixed');
+        self.$imgLogoLargeCog.css('position', 'fixed');
         if(scrollPosition < max){        
             self.$imgLogoWater.css('top', eq(scrollPosition) + 'px');
+            self.$imgLogoSmallCog.css('top', eq(scrollPosition) + 305 + 'px');
+            self.$imgLogoLargeCog.css('top', eq(scrollPosition) + 345 + 'px');
         }else{
             self.$imgLogoWater.css('top',  eq(max) + 'px');
         }
+
+        // Logo cog
+        // ==========
+        self.rotateElement( self.$imgLogoSmallCog, scrollPosition, 1.5);
+        self.rotateElement( self.$imgLogoLargeCog, scrollPosition + 20, -1);
 
         // Logo Fire
         // =============
@@ -165,16 +178,16 @@ lfd.site.prototype.scroll = function() {
         }
 
         // console.log(eq(scrollPosition))
-        self.$imgLogoWater.css('left', eq(scrollPosition))
-        self.$imgLogoFire.css('left', eq(scrollPosition))
-        self.$imgLogoText.css('left', eq(scrollPosition))
-        self.$imgLogoSpiel.css('left', eq(scrollPosition))
+        // self.$imgLogoWater.css('left', eq(scrollPosition))
+        // self.$imgLogoFire.css('left', eq(scrollPosition))
+        // self.$imgLogoText.css('left', eq(scrollPosition))
+        // self.$imgLogoSpiel.css('left', eq(scrollPosition))
 
     }else{
-        self.$imgLogoWater.css('left', 'initial')
-        self.$imgLogoFire.css('left', 'initial')
-        self.$imgLogoText.css('left', 'initial')
-        self.$imgLogoSpiel.css('left', 'initial')
+        // self.$imgLogoWater.css('left', 'initial')
+        // self.$imgLogoFire.css('left', 'initial')
+        // self.$imgLogoText.css('left', 'initial')
+        // self.$imgLogoSpiel.css('left', 'initial')
     }
 
 };
@@ -186,6 +199,16 @@ lfd.site.prototype.positionFixedToAbsolute = function($el, offset) {
         $el.css('position', 'absolute');
         $el.css('top', offset + top + 'px');
     }
+};
+
+lfd.site.prototype.rotateElement = function($el, degrees, multiplier) {
+        
+    $el.css({
+        '-webkit-transform':'rotate(' + degrees * multiplier + 'deg)',
+        '-moz-transform':'rotate(' + degrees * multiplier + 'deg)',
+        '-o-transform':'rotate(' + degrees * multiplier + 'deg)',
+        '-ms-transform':'rotate(' + degrees * multiplier + 'deg)',
+        'transform':'rotate(' + degrees * multiplier + 'deg)'});
 };
 
 new lfd.site();
