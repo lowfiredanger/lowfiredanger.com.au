@@ -108,7 +108,7 @@ lfd.site.prototype.scroll = function() {
         if(scrollPosition < max){        
             self.$imgLogoWater.css('top', eq(scrollPosition) + 'px');
             self.$imgLogoSmallCog.css('top', eq(scrollPosition) + 305 + 'px');
-            self.$imgLogoLargeCog.css('top', eq(scrollPosition) + 345 + 'px');
+            self.$imgLogoLargeCog.css('top', eq(scrollPosition) + 343 + 'px');
         }else{
             self.$imgLogoWater.css('top',  eq(max) + 'px');
         }
@@ -116,7 +116,7 @@ lfd.site.prototype.scroll = function() {
         // Logo cog
         // ==========
         self.rotateElement( self.$imgLogoSmallCog, scrollPosition, 1.5);
-        self.rotateElement( self.$imgLogoLargeCog, scrollPosition + 20, -1);
+        self.rotateElement( self.$imgLogoLargeCog, scrollPosition + 16, -1);
 
         // Logo Fire
         // =============
