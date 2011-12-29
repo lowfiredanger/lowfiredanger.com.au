@@ -1,4 +1,7 @@
 $baseline: 18px;
+$bright-blue: #0ee3fd;
+$light-red: #f27575;
+$cream: #ffffd5;
 
             /* http://meyerweb.com/eric/tools/css/reset/
                v2.0b1 | 201101
@@ -63,6 +66,22 @@ $baseline: 18px;
                 border-spacing: 0;
             }
 
+
+            .clearfix:after {
+                content: ".";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                line-height: 0;
+                height: 0;
+            }
+             
+            .clearfix {
+                display: inline-block;
+            }
+             
+
+
             body{
                 background-color: #1f3f3e;
                 text-align: center;
@@ -105,19 +124,19 @@ $baseline: 18px;
                 margin-left: 2em;
             }
             h1 {
-                color: #ffffd5;
+                color: $cream;
                 font-size: 24px;
                 line-height: 36px;
                 margin-bottom: 18px;
             }
             h2 {
-                color: #ffffd5;
+                color: $cream;
                 font-size: 48px;
                 line-height: 48px;
                 margin-bottom: 18px;
             }
             h3 {
-                color: #ffffd5;
+                color: $cream;
                 font-size: 18px;
                 line-height: 36px;
             }
@@ -153,41 +172,49 @@ $baseline: 18px;
                 background-color: #000;
             }
 
-            $logo-height: 1200px;
+
+            #hero h1{
+                display: none;
+            }
 
             .img-logo-water{
                 position: fixed;
-                background: url(/images/main/logo_water.png) no-repeat 50% $baseline;
-                height: $logo-height;
+                text-align: center;
                 width: 841px;
                 z-index: 100;
             }
             
             .img-logo-fire{
                 position: fixed;
-                background: url(/images/main/logo_fire.png) no-repeat 50% 0;
-                height: $logo-height;
+                text-align: center;
                 width: 841px;
                 z-index: 200;
             }
 
             .img-logo-text{
                 position: fixed;
-                background: url(/images/main/logo_text.png) no-repeat 50% 0;
-                height: $logo-height;
+                text-align: center;
                 width: 841px;
                 z-index: 300;
             }
+            .img-logo-spiel{
+                position: fixed;
+                text-align: center;
+                width: 841px;
+                z-index: 300;
+                color: $bright-blue;
+                font-size: 25px;
+                font-weight: lighter;
 
-            // img.logo-water{
-            //     position: absolute;
-            //     left: 90px
-            // }
-            
-            img.logo-fire{
-                position: absolute;
-                top: 900px
+                span{
+                    color: $light-red;
+
+                    &.plus{
+                        color: $cream;
+                    }
+                }
             }
+
 
             a:hover{
                 text-decoration: underline;
