@@ -3,7 +3,7 @@
     <head>
         <title>Low Fire Danger: Web applications engineering and development</title>
         <link href="/stylesheets/index.css" media="screen, projection" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/javascripts/libs/jquery-1.6.4.min.js"></script>
     </head>
     <body>
         <div id="page">
@@ -89,10 +89,8 @@ lfd.site.prototype.scroll = function() {
     scrollPosition = $(window).scrollTop();
     middle = dimensions.width/2;
 
-    console.log(scrollPosition)
+    // console.log(scrollPosition)
 
-    // max = 620;
-    // if( scrollPosition < max ) {
         // Logo Water
         // =============
         max = 360;
@@ -150,19 +148,33 @@ lfd.site.prototype.scroll = function() {
         }
 
         self.$imgLogoText.fadeTo(0, 1);
-    // }
+    
 
 
     // Post-logo transformation
     // =============
     if( scrollPosition > max ) {
-
         // self.$imgLogoText.fadeTo(0, 1 - (scrollPosition-max)/200)
         self.positionFixedToAbsolute(self.$imgLogoWater, max)
         self.positionFixedToAbsolute(self.$imgLogoFire, max)
         self.positionFixedToAbsolute(self.$imgLogoText, max)
         self.positionFixedToAbsolute(self.$imgLogoSpiel, max)
 
+        eq = function(x){
+            return max - x;
+        }
+
+        // console.log(eq(scrollPosition))
+        self.$imgLogoWater.css('left', eq(scrollPosition))
+        self.$imgLogoFire.css('left', eq(scrollPosition))
+        self.$imgLogoText.css('left', eq(scrollPosition))
+        self.$imgLogoSpiel.css('left', eq(scrollPosition))
+
+    }else{
+        self.$imgLogoWater.css('left', 'initial')
+        self.$imgLogoFire.css('left', 'initial')
+        self.$imgLogoText.css('left', 'initial')
+        self.$imgLogoSpiel.css('left', 'initial')
     }
 
 };
