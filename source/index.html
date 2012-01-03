@@ -35,7 +35,7 @@
                     <h2>We provide <span>creative</span> and <span>simple</span> solutions to complex problems</h2>
 
                     <p>
-                        We're keen on solving problems and translating it into a web application. Whether it's a simple time tracking system, or a complex inventory management system; we'll try and figure out the simplest approach to develop a solution that works in your web browser.
+                        We're keen on solving real world problems and translating the solution into a web application. Whether it's a simple time tracking system, or a complex inventory management system; we'll build something that works in your web browser.
                     </p>
                 </div>
             </section>
@@ -47,14 +47,24 @@
 
                 </p>
             </section>
+            -->
+            <section id="crafted-precise-applications">
+                <div class="img-monitor"><img src="/images/main/precision_engineered_web_applications.png" alt="precision engineered web applications"/></div>
+                
+                <div class="img-spanner"><img src="/images/main/spanner.png" alt="Low fire danger fire"/></div>
 
-            <section id="this-is-low-fire-danger">
+                <h2>Hand crafted web applications</h2>
+                <p>
+                    Use your hands!
+                </p>
+            </section>
+
+<!--             <section id="this-is-low-fire-danger">
                 <h2><span>Low Fire Danger:</span></h2>
                 <h3> Small agency, Engineering quality, Full spectrum creativity, Business smart, Honest and Easy going</h3>
-                <p>Those were some words which we thought described us and our passion.</p>
-                <p>We'd love to work with you, send us an email at <a href="contact@lowfiredanger.com.au">contact@lowfiredanger.com.au</a></p>
+                <p>Those are some words which best described us. We'd love to work with you, send us an email at <a href="contact@lowfiredanger.com.au">contact@lowfiredanger.com.au</a></p>
             </section>
- -->
+  -->
 
 <script>
 lfd = {}
@@ -84,6 +94,10 @@ lfd.site = function() {
     this.$smallCog1 = $('.img-small-cog-1');
     this.$imgSmallCog1 = $('.img-small-cog-1 img');
 
+    // Hand crafted web applications
+    this.$handCrafted = $('#crafted-precise-applications');
+    this.$imgSpanner = $('.img-spanner img');
+
     // Event bindings
     $(window).resize(function(){
         self.resizeSection.call(self);
@@ -99,16 +113,10 @@ lfd.site = function() {
     // Initialise
     self.resizeSection(self);
     self.scroll(self);
-    self.initializePositions();
 
 
     
 }
-
-lfd.site.prototype.initializePositions = function(){
-    // $('.img-logo-fire').css('top', '-10000px');
-
-};
 
 lfd.site.prototype.resizeSection = function() {
     var self, dimensions
@@ -144,84 +152,79 @@ lfd.site.prototype.scroll = function() {
 
     max = 1380;
 
-    //Logo transformation
-    // if( scrollPosition < max ) {
-        // Logo Water and cogs
-        // ====================
-        max = 360;
-        eq = function(x){
-            return 100 - x/5;
-        }
+    // Logo Water and cogs
+    // ====================
+    max = 360;
+    eq = function(x){
+        return 100 - x/5;
+    }
 
-        self.$imgLogoWater.css('position', 'fixed');
-        if(scrollPosition < max){        
-            self.$imgLogoWater.css('top', eq(scrollPosition) + 'px');
-            self.$logoSmallCog.css('top', eq(scrollPosition) + 305 + 'px');
-            self.$logoLargeCog.css('top', eq(scrollPosition) + 343 + 'px');
-        }else{
-            self.$imgLogoWater.css('top',  eq(max) + 'px');
+    self.$imgLogoWater.css('position', 'fixed');
+    if(scrollPosition < max){        
+        self.$imgLogoWater.css('top', eq(scrollPosition) + 'px');
+        self.$logoSmallCog.css('top', eq(scrollPosition) + 305 + 'px');
+        self.$logoLargeCog.css('top', eq(scrollPosition) + 343 + 'px');
+    }else{
+        self.$imgLogoWater.css('top',  eq(max) + 'px');
 
-            if( scrollPosition < 1143){
-                self.$logoSmallCog.css('position', 'fixed');
-                self.$logoLargeCog.css('position', 'fixed');
-                self.$logoSmallCog.css('top', eq(max) + 305 + 'px');
-                self.$logoLargeCog.css('top', eq(max) + 343 + 'px');
-            }
+        if( scrollPosition < 1143){
+            self.$logoSmallCog.css('position', 'fixed');
+            self.$logoLargeCog.css('position', 'fixed');
+            self.$logoSmallCog.css('top', eq(max) + 305 + 'px');
+            self.$logoLargeCog.css('top', eq(max) + 343 + 'px');
         }
+    }
 
-
-
-        // Logo Fire
-        // =============
-        max = 387;
-        eq = function(x){
-            return 1000 - x * 2;
-        }
-        
-        self.$imgLogoFire.css('position', 'fixed');
-        if( scrollPosition < max ) {
-            self.$imgLogoFire.css('top', eq(scrollPosition) + 'px');
-            self.$imgLogoText.fadeOut();
-        }else{
-            self.$imgLogoFire.css('top', eq(max) + 'px');
-            self.$imgLogoText.fadeIn();
-        }
-
-        // Logo text
-        // =============
-        max = 620;
-        eq = function(x){
-            return 1500 -  x * 1.5;
-        }
-
-        self.$imgLogoText.css('position', 'fixed');
-        if( scrollPosition < max ) {
-            self.$imgLogoText.css('top', eq(scrollPosition) + 'px');
-            self.$imgLogoSpiel.fadeOut();
-        }else{
-            self.$imgLogoText.css('top', eq(max) + 'px');
-            self.$imgLogoSpiel.fadeIn();
-        }
-        
-        // Logo spiel
-        // =============
-        max = 710;
-        eq = function(x){
-            return 1700 -  x * 1.5 ;
-        }
-
-        self.$imgLogoSpiel.css('position', 'fixed');
-        if( scrollPosition < max ) {
-            self.$imgLogoSpiel.css('top', eq(scrollPosition) + 'px');
-        }else{
-            self.$imgLogoSpiel.css('top', eq(max) + 'px');
-        }
-    // }
+    // Logo Fire
+    // =============
+    max = 387;
+    eq = function(x){
+        return 1000 - x * 2;
+    }
     
-        // Logo cog
-        // ==========
-        self.rotateElement( self.$imgLogoLargeCog, scrollPosition + 16, -1);
-        self.rotateElement( self.$imgLogoSmallCog, scrollPosition, 1.5);
+    self.$imgLogoFire.css('position', 'fixed');
+    if( scrollPosition < max ) {
+        self.$imgLogoFire.css('top', eq(scrollPosition) + 'px');
+        self.$imgLogoText.fadeOut();
+    }else{
+        self.$imgLogoFire.css('top', eq(max) + 'px');
+        self.$imgLogoText.fadeIn();
+    }
+
+    // Logo text
+    // =============
+    max = 620;
+    eq = function(x){
+        return 1500 -  x * 1.5;
+    }
+
+    self.$imgLogoText.css('position', 'fixed');
+    if( scrollPosition < max ) {
+        self.$imgLogoText.css('top', eq(scrollPosition) + 'px');
+        self.$imgLogoSpiel.fadeOut();
+    }else{
+        self.$imgLogoText.css('top', eq(max) + 'px');
+        self.$imgLogoSpiel.fadeIn();
+    }
+    
+    // Logo spiel
+    // =============
+    max = 710;
+    eq = function(x){
+        return 1700 -  x * 1.5 ;
+    }
+
+    self.$imgLogoSpiel.css('position', 'fixed');
+    if( scrollPosition < max ) {
+        self.$imgLogoSpiel.css('top', eq(scrollPosition) + 'px');
+    }else{
+        self.$imgLogoSpiel.css('top', eq(max) + 'px');
+    }
+
+    // Logo cog
+    // ==========
+    self.rotateElement( self.$imgLogoLargeCog, scrollPosition + 16, -1);
+    self.rotateElement( self.$imgLogoSmallCog, scrollPosition, 1.5);
 
 
     // Post-logo transformation
@@ -238,18 +241,8 @@ lfd.site.prototype.scroll = function() {
             return max - x;
         }
 
-        // console.log(eq(scrollPosition))
-        // self.$imgLogoWater.css('left', eq(scrollPosition))
-        // self.$imgLogoFire.css('left', eq(scrollPosition))
-        // self.$imgLogoText.css('left', eq(scrollPosition))
-        // self.$imgLogoSpiel.css('left', eq(scrollPosition))
-
     }else{
         self.$creativeAnimation.fadeOut();
-        // self.$imgLogoWater.css('left', 'initial')
-        // self.$imgLogoFire.css('left', 'initial')
-        // self.$imgLogoText.css('left', 'initial')
-        // self.$imgLogoSpiel.css('left', 'initial')
     }
 
     if( scrollPosition > 1143){
@@ -260,13 +253,26 @@ lfd.site.prototype.scroll = function() {
         self.rotateElement( self.$imgLargeCog1, scrollPosition, 1);
         self.rotateElement( self.$imgXLargeCog1, scrollPosition, 1);
         self.rotateElement( self.$imgSmallCog1, scrollPosition, -3.0);
+
+        self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
+        console.log( )
+
         
     }else{
         self.$creativeSell.fadeOut();
     }
+    
+    if( scrollPosition > 1560){
+
+        self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
+        self.$handCrafted.fadeIn();
+
+        
+    }else{
+        self.$handCrafted.fadeOut();
+    }
 
 };
-
 lfd.site.prototype.positionFixedToAbsolute = function($el, offset) {
     if( $el.css('position') != 'absolute' ) {
         var top = parseInt($el.css('top'));

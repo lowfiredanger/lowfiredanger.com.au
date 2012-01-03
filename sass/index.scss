@@ -261,6 +261,17 @@ $cream: #ffffd5;
                 top: -217px;
             }
 
+            .img-spanner {
+                position: relative;
+                top: -118px;
+                left: 11px;
+                img{
+                    transform-origin: 12px 17px;
+                    -moz-transform-origin: 12px 17px;
+                    -webkit-transform-origin: 12px 17px;
+                }
+            }
+
             // .img-browser{
             //     position: relative;
 
