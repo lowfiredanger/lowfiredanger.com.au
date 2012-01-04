@@ -261,13 +261,13 @@ lfd.site.prototype.scroll = function() {
         self.$creativeSell.fadeOut();
     }
 
-    if( scrollPosition > 1800 ) {
+    if( scrollPosition > 1900 ) {
         self.$handCraftedAnimation.fadeIn();
     }else{
         self.$handCraftedAnimation.fadeOut();
     }
     
-    if( scrollPosition > 2100){
+    if( scrollPosition > 2000){
         self.$handCraftedSell.fadeIn();
         self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
         self.rotateElement(self.$imgPen,  50 * Math.sin(scrollPosition/20), 0.1 )
