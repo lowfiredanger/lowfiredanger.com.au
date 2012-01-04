@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- Hey code peeper, this site isn't complete yet! I'm just putting it up to show some awesome people -->
     <head>
         <title>Low Fire Danger: Web applications engineering and development</title>
         <link href="/stylesheets/index.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -26,40 +27,35 @@
                     <div class="img-xlarge-cog-1"><img src="/images/main/cog_xlarge.png" alt="Low fire danger water"/></div>
                 </div>
 
-
-<!-- <div class="img-browser">
-                    <img src="/images/main/browser.png" alt="Low fire danger fire"/>
-                </div> -->
-
                 <div class="sell">
                     <h2>We provide <span>creative</span> and <span>simple</span> solutions to complex problems</h2>
 
                     <p>
-                        We're keen on solving real world problems and translating the solution into a web application. Whether it's a simple time tracking system, or a complex inventory management system; we'll build something that works in your web browser.
+                        We're keen on <span>solving real world problems</span> and translating the solution into a web application. Whether it's a simple time tracking system, or a complex inventory management system; we'll build something that works in your web browser.
                     </p>
                 </div>
             </section>
-<!-- 
-            <section id="passion">
-                <h2>We're <span>passionate</span> about the web</h2>
 
-                <p>
-
-                </p>
-            </section>
-            -->
             <section id="crafted-precise-applications">
                 <div class="animation">
                     <div class="img-monitor"><img src="/images/main/precision_engineered_web_applications.png" alt="precision engineered web applications"/></div>
                     
                     <div class="img-spanner"><img src="/images/main/spanner.png" alt="Low fire danger fire"/></div>
+                    <div class="img-pen"><img src="/images/main/pen.png" alt="Low fire danger fire"/></div>
                 </div>
 
                 <div class="sell">
-                    <h2>Hand crafted web applications</h2>
+                    <h2>We carefully <span>hand craft</span> brilliantly <span>usable</span> web applications</h2>
+                    
                     <p>
-                        Use your hands!
+                        We're not just code monkeys, we're passionate about <span>design</span> and <span>user experience</span>. We carefully craft your web application keeping its users in mind.
+                        <br>
+                        We make design decisions every step of the way to make sure it's <span>simple</span> to use, <span>easy</span> to navigate, achieves its purpose and makes everyone <span>happy</span>!
                     </p>
+
+<h4>
+                        We craft and code everything by hand right here in Sydney, Australia.
+                    </h4>
                 </div>
             </section>
 
@@ -105,6 +101,7 @@ lfd.site = function() {
     
     this.$handCrafted = $('#crafted-precise-applications');
     this.$imgSpanner = $('.img-spanner img');
+    this.$imgPen = $('.img-pen img');
 
     // Event bindings
     $(window).resize(function(){
@@ -264,15 +261,18 @@ lfd.site.prototype.scroll = function() {
         self.$creativeSell.fadeOut();
     }
 
-    if( scrollPosition > 1350 ) {
+    if( scrollPosition > 1800 ) {
         self.$handCraftedAnimation.fadeIn();
     }else{
         self.$handCraftedAnimation.fadeOut();
     }
     
-    if( scrollPosition > 1560){
+    if( scrollPosition > 2100){
         self.$handCraftedSell.fadeIn();
         self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
+        self.rotateElement(self.$imgPen,  50 * Math.sin(scrollPosition/20), 0.1 )
+        this.$imgPen.css('top', Math.sin(scrollPosition/10) * 5)
+
     }else{
         self.$handCraftedSell.fadeOut();
     }
