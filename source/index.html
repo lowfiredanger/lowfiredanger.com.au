@@ -49,14 +49,18 @@
             </section>
             -->
             <section id="crafted-precise-applications">
-                <div class="img-monitor"><img src="/images/main/precision_engineered_web_applications.png" alt="precision engineered web applications"/></div>
-                
-                <div class="img-spanner"><img src="/images/main/spanner.png" alt="Low fire danger fire"/></div>
+                <div class="animation">
+                    <div class="img-monitor"><img src="/images/main/precision_engineered_web_applications.png" alt="precision engineered web applications"/></div>
+                    
+                    <div class="img-spanner"><img src="/images/main/spanner.png" alt="Low fire danger fire"/></div>
+                </div>
 
-                <h2>Hand crafted web applications</h2>
-                <p>
-                    Use your hands!
-                </p>
+                <div class="sell">
+                    <h2>Hand crafted web applications</h2>
+                    <p>
+                        Use your hands!
+                    </p>
+                </div>
             </section>
 
 <!--             <section id="this-is-low-fire-danger">
@@ -83,6 +87,7 @@ lfd.site = function() {
     this.$imgLogoSpiel = $('.img-logo-spiel');
     this.$imgBrowser = $('.img-browser', '#what-are-web-applications');
 
+    // Creative simple ...
     this.$creativeSell = $('.sell', '#creative-simple-web-solutions');
     this.$creativeAnimation = $('.animation', '#creative-simple-web-solutions');
 
@@ -94,7 +99,10 @@ lfd.site = function() {
     this.$smallCog1 = $('.img-small-cog-1');
     this.$imgSmallCog1 = $('.img-small-cog-1 img');
 
-    // Hand crafted web applications
+    // Hand crafted web applications ...
+    this.$handCraftedSell = $('.sell', '#crafted-precise-applications');
+    this.$handCraftedAnimation = $('.animation', '#crafted-precise-applications');
+    
     this.$handCrafted = $('#crafted-precise-applications');
     this.$imgSpanner = $('.img-spanner img');
 
@@ -245,31 +253,28 @@ lfd.site.prototype.scroll = function() {
         self.$creativeAnimation.fadeOut();
     }
 
-    if( scrollPosition > 1143){
+    if( scrollPosition > 1143) {
         self.$creativeSell.fadeIn();
-        // self.positionAbsoluteToFixed($('#hoe'));
         self.positionFixedToAbsolute(this.$logoLargeCog,1143)
         self.positionFixedToAbsolute(this.$logoSmallCog,1143)
         self.rotateElement( self.$imgLargeCog1, scrollPosition, 1);
         self.rotateElement( self.$imgXLargeCog1, scrollPosition, 1);
         self.rotateElement( self.$imgSmallCog1, scrollPosition, -3.0);
-
-        self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
-        console.log( )
-
-        
     }else{
         self.$creativeSell.fadeOut();
     }
+
+    if( scrollPosition > 1350 ) {
+        self.$handCraftedAnimation.fadeIn();
+    }else{
+        self.$handCraftedAnimation.fadeOut();
+    }
     
     if( scrollPosition > 1560){
-
+        self.$handCraftedSell.fadeIn();
         self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
-        self.$handCrafted.fadeIn();
-
-        
     }else{
-        self.$handCrafted.fadeOut();
+        self.$handCraftedSell.fadeOut();
     }
 
 };
