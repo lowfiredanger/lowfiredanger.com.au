@@ -60,6 +60,19 @@
             </section>
 
             <section id="testing">
+                <div class="animation">
+                    <div class="img-cursor"><img src="/images/main/mouse_cursor.png" alt="Mouse cursor"/></div>
+                    <div class="img-hammer"><img src="/images/main/hammer.png" alt="Hammer"/></div>
+                    <div class="img-boxing-glove"><img src="/images/main/punch.png" alt="Pow"/></div>
+                </div>
+                <div class="sell">
+                    <h2>We automate tests, to deliver reliable web applications.</h2>
+
+                    <p>
+                        We do our best to develop reliable web applications. <span>Testing is important</span>, and we like to make sure that your solution is well tested. We write automated tests that run everytime we modify your application; ensuring we don't introduce nasty bugs.
+                    </p>
+                </div>
+                    
             </section>
 
 <!--             <section id="this-is-low-fire-danger">
@@ -116,7 +129,7 @@ lfd.site = function() {
     });
 
 
-    $('#page').height('5000px')
+    // $('#page').height('5000px')
 
     // Initialise
     self.resizeSection(self);
@@ -264,23 +277,23 @@ lfd.site.prototype.scroll = function() {
         self.$creativeSell.fadeOut();
     }
 
-    if( scrollPosition > 1900 ) {
+    if( scrollPosition > 1700 ) {
         self.$handCraftedAnimation.fadeIn();
+        self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
+        self.rotateElement(self.$imgPen,  50 * Math.sin(scrollPosition/20), 0.1 )
+        this.$imgPen.css('top', Math.sin(scrollPosition/10) * 5)
     }else{
         self.$handCraftedAnimation.fadeOut();
     }
     
     if( scrollPosition > 2000){
         self.$handCraftedSell.fadeIn();
-        self.rotateElement(self.$imgSpanner,  180 * Math.sin(scrollPosition/40), 0.33 )
-        self.rotateElement(self.$imgPen,  50 * Math.sin(scrollPosition/20), 0.1 )
-        this.$imgPen.css('top', Math.sin(scrollPosition/10) * 5)
-
     }else{
         self.$handCraftedSell.fadeOut();
     }
 
 };
+
 lfd.site.prototype.positionFixedToAbsolute = function($el, offset) {
     if( $el.css('position') != 'absolute' ) {
         var top = parseInt($el.css('top'));
@@ -289,6 +302,7 @@ lfd.site.prototype.positionFixedToAbsolute = function($el, offset) {
         $el.css('top', offset + top + 'px');
     }
 };
+
 lfd.site.prototype.positionAbsoluteToFixed = function($el) {
     if( $el.css('position') != 'fixed' ) {
         var position = $el.position();
