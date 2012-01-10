@@ -291,6 +291,45 @@ $cream: #ffffd5;
                     -webkit-transform-origin: 12px 17px;
                 }
             }
+            
+            .img-hammer {
+                position: absolute;
+                top: 0px;
+                left: 415px;
+                img{
+                    position: relative;
+                    transform-origin: 176px 127px;
+                    -moz-transform-origin: 176px 127px;
+                    -webkit-transform-origin: 176px 127px;
+                }
+            }
+            .img-cursor {
+                position: relative;
+                top: 40px;
+            }
+            
+            #testing{
+                .animation{
+                    position: relative;
+                    margin-bottom: 80px;
+                }
+            }
+            .img-boxing-glove {
+                position: absolute;
+                top: 70px;
+                left: 195px;
+                img{
+                    position: relative;
+                    transform-origin: 176px 127px;
+                    -moz-transform-origin: 176px 127px;
+                    -webkit-transform-origin: 176px 127px;
+                }
+            }
+
+
+            #this-is-low-fire-danger{
+                margin-top: 400px;
+            }
 
             // .img-browser{
             //     position: relative;
@@ -299,6 +338,10 @@ $cream: #ffffd5;
             //         position: absolute;
             //     }
             // }
+
+            .contact-email{
+                margin: 36px;
+            }
 
 
             a:hover{
@@ -309,8 +352,9 @@ $cream: #ffffd5;
                 color: #61bbc6;
             }
 
-            a[href="/blog"],
-            #contact-us a{
+            .contact-email a,
+            a[href="/blog"]{
+                 text-decoration: none;
                 font-size: 18px;
                 margin-top: 18px;
                 padding: 12px;
@@ -319,14 +363,13 @@ $cream: #ffffd5;
                 border-radius: 5px;
                 -moz-border-radius: 5px;
                 -webkit-border-radius: 5px;
-            }
 
-            a[href="/blog"]:hover,
-            #contact-us a:hover{
-                background-color: #069124;
-                text-decoration: none;
+                &:hover{
+                    background-color: #069124;
+                    text-decoration: none;
+                }
             }
-
+            
             a[href="/blog"]{
                 position: fixed;
                 bottom: 18px;
