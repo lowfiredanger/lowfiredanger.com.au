@@ -2,6 +2,120 @@
 @include global-reset;
 @include reset-html5;
 
+$baseline: 18px;
+$bright-blue: #0ee3fd;
+$light-red: #f27575;
+$heading-color: #333333;
+$text-color: #333333;
+
 body{
 	background: url('/images/main/bg.png');
+	text-align: left;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: $baseline;
+	line-height: 24px;
+	color: $heading-color;
+}
+
+.hero{
+	text-align: center;
+	margin-bottom: 8 * $baseline;
+
+	h1{
+		display: none;
+	}
+}
+
+.page-container {
+	margin: 0 auto;
+	width: 940px;
+}
+
+p,
+ul,
+ol {
+	color: $text-color;
+	margin-bottom: $baseline;
+	font-weight: lighter;
+	line-height: $baseline * 2;
+	text-align: left;
+	span{
+		color: $bright-blue;
+	}
+}
+
+ul p, ol p{
+	color: #a3b0b0;
+	margin: 12px;
+}
+
+ol{
+	list-style:decimal;
+	border-left: solid 1px #f27575;
+	margin-left: 0;
+	color: #f27575;
+}
+
+ol li{
+	padding-left: $baseline;
+}
+
+ul {
+	list-style-type: square;
+	margin-left: 2em;
+}
+h1 {
+	color: $heading-color;
+	font-size: $baseline * 2;
+	line-height: 72px;
+	margin-bottom: $baseline;
+}
+h2 {
+	color: $heading-color;
+	font-size: $baseline * 1.5;
+	line-height: 54px;
+	padding-bottom: $baseline;
+	margin-bottom: $baseline * 2;
+	font-family: georgia;
+	font-style: italic;
+	border-bottom:  2px solid #333;
+
+	span{
+		color: $bright-blue;
+	}
+}
+h3 {
+	color: $heading-color;
+	font-size: $baseline * 2;
+	line-height: 54px;
+	font-family: georgia;
+}
+h4 {
+	color: $heading-color;
+	font-size: 24px;
+	line-height: 54px;
+	font-family: georgia;
+}
+
+p{
+	font-size: 24px;
+}
+
+strong{
+	font-weight: bold;
+}
+
+section{
+	margin-bottom: 72px;
+	position: relative;
+}
+
+section .text{
+	text-align:justify;
+}
+
+a[href="/blog"]{
+    position: fixed;
+    bottom: $baseline;
+    right: $baseline * 2;
 }
