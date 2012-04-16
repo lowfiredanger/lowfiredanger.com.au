@@ -4,6 +4,7 @@ title: "Cascading deletion with Carrierwave and Mongoid"
 date: 2011-04-02 20:51
 comments: true
 categories: Ruby on Rails, Mongoid, MongoDB
+author: Sonny Mai
 ---
 
 [Carrierwave](https://github.com/jnicklas/carrierwave) is an awesome gem for
