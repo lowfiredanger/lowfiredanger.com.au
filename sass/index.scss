@@ -3,7 +3,7 @@
 @include reset-html5;
 
 $baseline: 18px;
-$bright-blue: #0ee3fd;
+$bright-blue: #5c8f99;
 $light-red: #f27575;
 $heading-color: #333333;
 $text-color: #333333;
@@ -50,10 +50,9 @@ ul p, ol p{
 }
 
 ol{
-	list-style:decimal;
+	list-style: decimal-leading-zero;
 	border-left: solid 1px #f27575;
 	margin-left: 0;
-	color: #f27575;
 }
 
 ol li{
@@ -64,12 +63,21 @@ ul {
 	list-style-type: square;
 	margin-left: 2em;
 }
+
+h1, h2, h3 {
+	span{
+		color: $bright-blue;
+		font-style: italic;
+	}
+}
+
 h1 {
 	color: $heading-color;
 	font-size: $baseline * 2;
 	line-height: 72px;
 	margin-bottom: $baseline;
 }
+
 h2 {
 	color: $heading-color;
 	font-size: $baseline * 1.5;
@@ -79,17 +87,15 @@ h2 {
 	font-family: georgia;
 	font-style: italic;
 	border-bottom:  2px solid #333;
-
-	span{
-		color: $bright-blue;
-	}
 }
+
 h3 {
 	color: $heading-color;
 	font-size: $baseline * 2;
 	line-height: 54px;
 	font-family: georgia;
 }
+
 h4 {
 	color: $heading-color;
 	font-size: 24px;
@@ -97,25 +103,66 @@ h4 {
 	font-family: georgia;
 }
 
-p{
+p {
 	font-size: 24px;
 }
 
-strong{
+strong {
 	font-weight: bold;
 }
 
-section{
+section {
 	margin-bottom: 72px;
 	position: relative;
 }
 
-section .text{
+section .text {
 	text-align:justify;
 }
 
-a[href="/blog"]{
+a[href="/blog"] {
     position: fixed;
     bottom: $baseline;
     right: $baseline * 2;
+}
+
+a {
+	color: $text-color;
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+a.btn {
+    color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	margin-top: 18px;
+	padding: 12px;
+	background-color: $bright-blue;
+	display: inline;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	&:hover{
+		background-color: #069124;
+		text-decoration: none;
+	}
+}
+
+#shiny-version{
+	position: absolute;
+	right: 72px;
+	font-size: $baseline/1.2;
+}
+
+#this-is-low-fire-danger {
+	text-align: center;
+	h3{
+		margin-bottom: $baseline;
+	}
+}
+
+#contact-low-fire-danger {
+	margin-top: $baseline * 2;
 }
