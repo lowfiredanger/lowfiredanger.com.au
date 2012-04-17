@@ -154,6 +154,7 @@ a.btn {
 	position: absolute;
 	right: 72px;
 	font-size: $baseline/1.2;
+	z-index: 1000;
 }
 
 #this-is-low-fire-danger {
@@ -165,4 +166,98 @@ a.btn {
 
 #contact-low-fire-danger {
 	margin-top: $baseline * 2;
+}
+
+/* Phone */
+@media (max-width: 767px) {
+  .visible-phone {
+    display: block;
+  }
+  .hidden-phone {
+    display: none;
+  }
+  .hidden-desktop {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .visible-tablet {
+    display: block;
+  }
+  .hidden-tablet {
+    display: none;
+  }
+  .hidden-desktop {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+
+/* Phone */
+@media (max-width: 767px) {
+	.hero{
+		margin-bottom: $baseline * 3;
+		img{
+			width: 100%;
+		}
+	}
+
+	a[href="/blog"] {
+		position: static;
+		text-align: center;
+		display: block;
+		background: none;
+		color: black;
+		z-index: 1000;
+
+		&:hover{
+			background: none;
+			color: #000;
+		}
+	}
+
+	#this-is-low-fire-danger{
+		h3, h4{
+			font-size: $baseline * 1.5;
+			line-height: $baseline * 2;
+		}
+	}
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (max-width: 979px) {
+	body{
+		padding: 0 $baseline;
+	}
+
+	p{
+		font-size: $baseline;
+		line-height: $baseline * 1.5;
+	}
+
+	h2{
+		font-size: $baseline;
+		line-height: $baseline * 1.5;
+	}
+
+	.page-container {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	ol {
+		margin-left: $baseline * 2;
+	}
+}
+
+@media (min-width: 980px) {
+
 }
