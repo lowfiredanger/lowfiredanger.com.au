@@ -13,7 +13,7 @@ What happens when there you start building your backbone.js app but find that th
 
 One cool feature, that's not necessarily a part of backbone.js is mixins. If you're familiar with Ruby, then it should be a familiar concept. Mixins are basically a way to inherit another class, or module and be able to use the inherited class's functions/methods.
 
-To create a mixin in backbone, you use underscores nifty ```_.extend()``` method to allow an object to inherit some other objects methods.
+To create a mixin x	in backbone, you use underscores nifty ```_.extend()``` method to allow an object to inherit some other objects methods.
 
 Take the following silly example. If you wanted to reuse the functions in the ComplexMaths object, how would you do it with ```_.extend()```?
 

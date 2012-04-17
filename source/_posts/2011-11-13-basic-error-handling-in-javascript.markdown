@@ -5,6 +5,7 @@ date: 2011-11-13 21:59
 comments: true
 categories: 
 published: false
+author: Sonny Mai
 ---
 
 I've noticed error handling is often an afterthought in javascript I've seen (I admit that I'm a little guilty myself, but hey, at least I'm aware right?!). Good error handling can make your javascript more easier to debug and less brittle.

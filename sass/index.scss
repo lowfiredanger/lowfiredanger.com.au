@@ -1,187 +1,263 @@
-            /* http://meyerweb.com/eric/tools/css/reset/
-               v2.0b1 | 201101
-               NOTE: WORK IN PROGRESS
-               USE WITH CAUTION AND TEST WITH ABANDON
-            */
+@import "compass";
+@include global-reset;
+@include reset-html5;
 
-            html, body, div, span, applet, object, iframe,
-            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-            a, abbr, acronym, address, big, cite, code,
-            del, dfn, em, img, ins, kbd, q, s, samp,
-            small, strike, strong, sub, sup, tt, var,
-            b, u, i, center,
-            dl, dt, dd, ol, ul, li,
-            fieldset, form, label, legend,
-            table, caption, tbody, tfoot, thead, tr, th, td,
-            article, aside, canvas, details, figcaption, figure,
-            footer, header, hgroup, menu, nav, section, summary,
-            time, mark, audio, video {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                outline: 0;
-                font-size: 100%;
-                font: inherit;
-                vertical-align: baseline;
-            }
-            /* HTML5 display-role reset for older browsers */
-            article, aside, details, figcaption, figure,
-            footer, header, hgroup, menu, nav, section {
-                display: block;
-            }
-            body {
-                line-height: 1;
-            }
-            ol, ul {
-                list-style: none;
-            }
-            blockquote, q {
-                quotes: none;
-            }
-            blockquote:before, blockquote:after,
-            q:before, q:after {
-                content: '';
-                content: none;
-            }
-   
-            :focus {
-              outline: 1px dotted red;
-            }
+$baseline: 18px;
+$bright-blue: #5c8f99;
+$light-red: #f27575;
+$heading-color: #333333;
+$text-color: #333333;
 
-            /* remember to highlight inserts somehow! */
-            ins {
-                text-decoration: none;
-            }
-            del {
-                text-decoration: line-through;
-            }
-
-            table {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-
-            body{
-                background-color: #1f3f3e;
-                text-align: center;
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 18px;
-                line-height: 24px;
-                color: #b6b694;
-            }
-
-            p,
-            ul,
-            ol {
-                color: #b6b694;
-                margin-bottom: 18px;
-                font-weight: lighter;
-            }
-
-            ul{
-                color: #f27575;
-            }
-
-            ul p, ol p{
-                color: #a3b0b0;
-                margin: 12px;
-            }
-
-            ol{
-                list-style:decimal;
-                border-left: solid 1px #f27575;
-                margin-left: 0;
-                color: #f27575;
-            }
-
-            ol li{
-                padding-left: 18px;
-            }
-
-            ul {
-                list-style-type: square;
-                margin-left: 2em;
-            }
-            h1 {
-                color: #ffffd5;
-                font-size: 24px;
-                line-height: 36px;
-                margin-bottom: 18px;
-            }
-            h2 {
-                color: #ffffd5;
-                font-size: 48px;
-                line-height: 48px;
-                margin-bottom: 18px;
-            }
-            h3 {
-                color: #ffffd5;
-                font-size: 18px;
-                line-height: 36px;
-            }
-            strong{
-                font-weight: bold;
-            }
-
-            section{
-                margin-bottom: 72px;
-            }
-
-            section .text{
-
-                text-align:justify;
-            }
-
-            #page{
-                margin: 0 auto 72px;
-                width: 650px;
-            }
-
-            a{
-                color: #fff;
-                text-decoration: none;
-                font-weight: lighter;
-            }
-
-            hr{
-                margin-bottom: 48px;
-                border: none;
-                height: 1px;
-                background-color: #000;
+body{
+	background: url('/images/main/bg.png');
+	text-align: left;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: $baseline;
+	line-height: 24px;
+	color: $heading-color;
 }
 
-            a:hover{
-                text-decoration: underline;
-            }
+.hero{
+	text-align: center;
+	margin-bottom: 8 * $baseline;
 
-            #hero{
-                margin-bottom: 108px;
-            }
+	h1{
+		display: none;
+	}
+}
 
-            .plus{
-                color: #61bbc6;
-            }
+.page-container {
+	margin: 0 auto;
+	width: 940px;
+}
 
-            a[href="/blog"],
-            #contact-us a{
-                font-size: 18px;
-                margin-top: 18px;
-                padding: 12px;
-                background-color:#186136;
-                display: inline;
-                border-radius: 5px;
-                -moz-border-radius: 5px;
-                -webkit-border-radius: 5px;
-            }
+p,
+ul,
+ol {
+	color: $text-color;
+	margin-bottom: $baseline;
+	font-weight: lighter;
+	line-height: $baseline * 2;
+	text-align: left;
+	span{
+		color: $bright-blue;
+	}
+}
 
-            a[href="/blog"]:hover,
-            #contact-us a:hover{
-                background-color: #069124;
-                text-decoration: none;
-            }
+ul p, ol p{
+	color: #a3b0b0;
+	margin: 12px;
+}
 
-            a[href="/blog"]{
-                position: fixed;
-                bottom: 18px;
-                right: 36px;
-            }
+ol{
+	list-style: decimal-leading-zero;
+	border-left: solid 1px #f27575;
+	margin-left: 0;
+}
+
+ol li{
+	padding-left: $baseline;
+}
+
+ul {
+	list-style-type: square;
+	margin-left: 2em;
+}
+
+h1, h2, h3 {
+	span{
+		color: $bright-blue;
+		font-style: italic;
+	}
+}
+
+h1 {
+	color: $heading-color;
+	font-size: $baseline * 2;
+	line-height: 72px;
+	margin-bottom: $baseline;
+}
+
+h2 {
+	color: $heading-color;
+	font-size: $baseline * 1.5;
+	line-height: 54px;
+	padding-bottom: $baseline;
+	margin-bottom: $baseline * 2;
+	font-family: georgia;
+	font-style: italic;
+	border-bottom:  2px solid #333;
+}
+
+h3 {
+	color: $heading-color;
+	font-size: $baseline * 2;
+	line-height: 54px;
+	font-family: georgia;
+}
+
+h4 {
+	color: $heading-color;
+	font-size: 24px;
+	line-height: 54px;
+	font-family: georgia;
+}
+
+p {
+	font-size: 24px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+section {
+	margin-bottom: 72px;
+	position: relative;
+}
+
+section .text {
+	text-align:justify;
+}
+
+a[href="/blog"] {
+    position: fixed;
+    bottom: $baseline;
+    right: $baseline * 2;
+}
+
+a {
+	color: $text-color;
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+a.btn {
+    color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	margin-top: 18px;
+	padding: 12px;
+	background-color: $bright-blue;
+	display: inline;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	&:hover{
+		background-color: #069124;
+		text-decoration: none;
+	}
+}
+
+#shiny-version{
+	position: absolute;
+	right: 72px;
+	font-size: $baseline/1.2;
+	z-index: 1000;
+}
+
+#this-is-low-fire-danger {
+	text-align: center;
+	h3{
+		margin-bottom: $baseline;
+	}
+}
+
+#contact-low-fire-danger {
+	margin-top: $baseline * 2;
+}
+
+/* Phone */
+@media (max-width: 767px) {
+  .visible-phone {
+    display: block;
+  }
+  .hidden-phone {
+    display: none;
+  }
+  .hidden-desktop {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .visible-tablet {
+    display: block;
+  }
+  .hidden-tablet {
+    display: none;
+  }
+  .hidden-desktop {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+
+/* Phone */
+@media (max-width: 767px) {
+	.hero{
+		margin-bottom: $baseline * 3;
+		img{
+			width: 100%;
+		}
+	}
+
+	a[href="/blog"] {
+		position: static;
+		text-align: center;
+		display: block;
+		background: none;
+		color: black;
+		z-index: 1000;
+
+		&:hover{
+			background: none;
+			color: #000;
+		}
+	}
+
+	#this-is-low-fire-danger{
+		h3, h4{
+			font-size: $baseline * 1.5;
+			line-height: $baseline * 2;
+		}
+	}
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (max-width: 979px) {
+	body{
+		padding: 0 $baseline;
+	}
+
+	p{
+		font-size: $baseline;
+		line-height: $baseline * 1.5;
+	}
+
+	h2{
+		font-size: $baseline;
+		line-height: $baseline * 1.5;
+	}
+
+	.page-container {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	ol {
+		margin-left: $baseline * 2;
+	}
+}
+
+@media (min-width: 980px) {
+
+}
