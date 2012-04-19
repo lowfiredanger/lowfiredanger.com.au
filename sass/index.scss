@@ -206,33 +206,13 @@ a.btn {
 			width: 100%;
 		}
 	}
-
-	a[href="/blog"] {
-		position: static;
-		text-align: center;
-		display: block;
-		background: none;
-		color: black;
-		z-index: 1000;
-
-		&:hover{
-			background: none;
-			color: #000;
-		}
-	}
-
-	#this-is-low-fire-danger{
-		h3, h4{
-			font-size: $baseline * 1.5;
-			line-height: $baseline * 2;
-		}
-	}
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 979px) {
 
 }
+
 @media (max-width: 979px) {
 	body{
 		padding: 0 $baseline;
@@ -255,6 +235,27 @@ a.btn {
 
 	ol {
 		margin-left: $baseline * 2;
+	}
+
+	a[href="/blog"] {
+		position: static;
+		text-align: center;
+		display: block;
+		background: none;
+		color: black;
+		z-index: 1000;
+
+		&:hover{
+			background: none;
+			color: #000;
+		}
+	}
+
+	#this-is-low-fire-danger{
+		h3, h4{
+			font-size: $baseline * 1.5;
+			line-height: $baseline * 2;
+		}
 	}
 }
 
