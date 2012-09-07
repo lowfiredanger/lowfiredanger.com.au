@@ -3,7 +3,7 @@ layout: post
 title: 'Basic error handling in javascript'
 date: 2012-09-04 21:59
 comments: true
-categories: 
+categories: Javascript
 published: true
 author: Sonny Mai
 ---
