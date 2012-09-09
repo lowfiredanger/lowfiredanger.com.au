@@ -74,7 +74,7 @@ body > nav {
 @mixin mask-subscription-nav($feed: 'rss.png'){
   position: relative; top: 0px;
   text-indent: -999999em;
-  background-color: $nav-border-right;
+  background-color:red;
   border: 0;
   padding: 0;
   &,&:after { @include mask-image($feed); }

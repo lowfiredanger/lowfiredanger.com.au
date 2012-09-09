@@ -21,6 +21,7 @@ article {
         @extend .sans;
         text-transform: uppercase;
         position: absolute; top: 0;
+        color: $meta-color;
       }
     }
     @media only screen and (min-width: 768px) {
