@@ -2,9 +2,9 @@ $noise-bg: image-url('noise.png') top left;
 $img-border: inline-image('dotted-border.png');
 
 // Main Link Colors
-$link-color: lighten(#165b94, 3) !default;
+$link-color: lighten(#61bbc6, 3) !default;
 $link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
-$link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !default;
+$link-color-visited: adjust-color($link-color, $hue: 40, $lightness: 5) !default;
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 // Main Section Colors
@@ -17,15 +17,16 @@ $header-border: lighten($header-bg, 15) !default;
 $title-color: #ffffd5 !default;
 $subtitle-color: #b6b694 !default;
 
-$text-color: #222 !default;
-$text-color-light: #aaa !default;
+$text-color: #bed0d1 !default;
+$header-color: #819596;
+$text-color-light: #fff !default;
 $type-border: #ddd !default;
 
 /* Navigation */
 $nav-bg: #ccc !default;
 $nav-bg-front: image-url('noise.png');
 $nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11));
-$nav-color: darken($nav-bg, 38) !default;
+$nav-color: #dadada !default;
 $nav-color-hover: darken($nav-color, 25) !default;
 $nav-placeholder: desaturate(darken($nav-bg, 10), 15) !default;
 $nav-border: darken($nav-bg, 10) !default;
@@ -63,6 +64,7 @@ $page-border-bottom: darken($footer-bg, 5) !default;
 
 a {
   @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
+  text-decoration: none;
 }
 aside.sidebar a {
   @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
@@ -73,14 +75,4 @@ a {
 
 html {
   background-color: #1f3f3e;
-}
-body {
-  > div {
-    background: $sidebar-bg $noise-bg;
-    border-bottom: 1px solid $page-border-bottom;
-    > div {
-      background: $main-bg $noise-bg;
-      border-right: 1px solid $sidebar-border;
-    }
-  }
 }
