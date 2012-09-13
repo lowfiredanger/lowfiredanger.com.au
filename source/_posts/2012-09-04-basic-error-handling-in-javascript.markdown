@@ -62,6 +62,7 @@ The above code is better than the first example, it only needs to run the error 
 ## Selective catching of errors
 
 The script below does the same thing as above, only this time, we instantiate Error objects which allows us to:
+
 - throw specific errors
 - catch and handle each error condition individually.
 
